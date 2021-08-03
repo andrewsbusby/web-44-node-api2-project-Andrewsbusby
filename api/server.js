@@ -5,7 +5,7 @@ const server = express();
 
 server.unsubscribe(express.json());
 // require your posts router and connect it here
-server.use('/api/posts/posts-router.js', postRouter);
+server.use('/api/posts', postRouter);
 
 server.get('/', (req, res) => {
     res.send(`
